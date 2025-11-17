@@ -8,7 +8,7 @@ p_y = polyfit(year, Moose, 3);
 
 % Generate smooth curve
 year_fit = linspace(1985, 2000, 200);
-x_fit = polyval(p_x, year_fit);
+x_fit = polyval(p_Wolf, year_fit);
 y_fit = polyval(p_y, year_fit);
 
 % Plot
@@ -21,4 +21,5 @@ xlabel('Year'); ylabel('Wolves');
 subplot(2,1,2);
 plot(year, Moose, 'bo', year_fit, y_fit, 'b-');
 title('Moose per Year');
+
 xlabel('Year'); ylabel('Moose');
